@@ -6,10 +6,24 @@ const users = []
 
 console.log(users);
 function generate_users(){
-    users[0] = `{ username:"${user0.username}", email:"${user0.email}", avatar:"${user0.avatar}", created:${user0.created}, selected:${user0.selected}}`;
-    users[1] = `${user1}`;
-    users[2] = `${user2}`  
+    users[0] = user0;
+    users[1] = user1;
+    users[2] = user2; 
     }
+
+// function makeUser(username, email, avatar = 'image/users.png', created = new Date(), selected = false){
+//     return{
+//         username,
+//         email,
+//         avatar,
+//         created,
+//         selected
+//     };
+// }
+
+// let user0 = makeUser('Petea', 'peteapopov@mail.ru');
+// let user1 = makeUser('Nastea', 'Nasteapetrova@mail.ru');
+// let user2 = makeUser('Igor', 'igorpetrenco@mail.ru');
 generate_users(); 
 function render_users(){
     users.forEach(m=>{
@@ -45,17 +59,5 @@ function updateStyle(){
 }
 }
 render_users();
-// function updateMessageWindow(){
-//     //messages.forEach(function( m ){
-//       messages.forEach(m => { //arrow function
-//       console.log(m.text);
-//       var p = document.createElement("p");
-//       p.innerText = m.text;
-//       p.className = m.author;
-//       var messages = document.getElementsByClassName('messages');
-//       messages[0].appendChild(p);
-//       var br = document.createElement("br");
-//       p.appendChild(br);
-//       var small = document.createElement("small")
-//       small.innerText = m.time;
-//       p.appendChild(small);
+users[0].select();
+users[0].unselect()
