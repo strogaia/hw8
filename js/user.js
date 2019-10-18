@@ -64,8 +64,9 @@ class User{
         var oldstyle = document.getElementById('users');
         var div = document.getElementsByClassName('selected')[0];
         div.className = 'user';
-        div.style.color = USER_STYLES.color;
-        div.style.backgroundColor = USER_STYLES.backgroundColor;
+        var that = this;
+        this.div = div;
+        this.updateStyle();
         oldstyle.appendChild(div);
     }
 }
