@@ -51,26 +51,38 @@ class User{
     }
             
     select(){
-        var newstyle = document.getElementById('users');       
+        var newstyle = document.getElementById('users');   
+        var one = document.getElementsByClassName('user')[1];
+        var o = one;
+        var two = document.getElementsByClassName('user')[2];
+        var t = two;
+        newstyle.removeChild(two);
+        newstyle.removeChild(one);
         var div = document.getElementsByClassName('user')[0];
         div.className = 'selected'
         var that = this;
         this.div = div;
         this.updateStyle();
         newstyle.appendChild(div);
+        newstyle.appendChild(o);
+        newstyle.appendChild(t);
     }
-
+   
     unselect(){
-        var oldstyle = document.getElementById('users');
+        var oldstyle = document.getElementById('users'); 
+        var one = document.getElementsByClassName('user')[0];
+        var o = one;
+        var two = document.getElementsByClassName('user')[1];
+        var t = two;
+        oldstyle.removeChild(two);
+        oldstyle.removeChild(one);  
         var div = document.getElementsByClassName('selected')[0];
         div.className = 'user';
         var that = this;
         this.div = div;
         this.updateStyle();
         oldstyle.appendChild(div);
+        oldstyle.appendChild(o);
+        oldstyle.appendChild(t);
     }
 }
-
-let user4 = new User("Stas", "angel@mail.ru")
-user4.render();
-user4.select();
