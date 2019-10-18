@@ -59,10 +59,6 @@ class User{
         this.updateStyle();
         newstyle.appendChild(div);
     }
-    // updStyle(){
-    //     this.div.style.color = USER_STYLES.selectedColor;
-    //     this.div.style.backgroundColor = USER_STYLES.selectedBackgroundColor;
-    // }
 
     unselect(){
         // var selected = false;
@@ -78,49 +74,3 @@ class User{
 let user4 = new User("Stas", "angel@mail.ru")
 user4.render();
 user4.select();
-// <body>
-
-//     <div id="pro"></div>
-    
-
-//     <script>
-//         class User {
-//             constructor(name, avatar, webAdress, password, dateReg = new Date()){
-//                 this.name = name;
-//                 this.avatar = avatar;
-//                 this.webAdress = webAdress;
-//                 this.password = password;
-//                 this.created = dateReg;
-//             }
-            
-//             render(){
-//                 var text = "";
-//                 var profil = document.getElementById("pro");
-//                 profil.innerHTML += `<div
-//                 <h2> ${this.name} </h2>  
-//                 <h3> ${this.webAdress} <h3>
-//                 <p> ${this.password} </p>
-//                 <img src="${this.avatar}"/> 
-//                 <p>user has registered ${this.period()} - days ago</p>
-//                 </div>`;
-//             }
-            
-//             period(){
-//               var date1 = new Date();
-//               var date2 = new Date(this.created);
-//               var diffTime = Math.abs(date2.getTime() - date1.getTime());
-//               var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-//               return diffDays;
-//             }
-//         }
-//         let user1 = new User("Stas", "images/hqdefault.jpg", "angel@mail.ru", "liusha32", "2019-08-06" );
-//         let user2 = new User("Iulia", "images/user2.jpg", "iuly@mail.ru", "mypass89", "2019-07-06" );
-//         let user3 = new User("Roman", "images/user3.jpg", "goodboy@mail.ru", "cool2008", "2019-03-06" );
-
-//         user1.render();
-//         user2.render();
-//         user3.render();
-//     </script>
-// </body>
-
-// </html>
