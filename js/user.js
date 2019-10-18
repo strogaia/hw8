@@ -61,13 +61,12 @@ class User{
     }
 
     unselect(){
-        // var selected = false;
-        // var oldstyle = document.getElementById('users');
-
-        // var div = document.getElementsByClassName('user')[0];
-        //     div.style.color = USER_STYLES.color;
-        //     div.style.backgroundColor = USER_STYLES.backgroundColor;
-        // oldstyle.appendChild(div);
+        var oldstyle = document.getElementById('users');
+        var div = document.getElementsByClassName('selected')[0];
+        div.className = 'user';
+        div.style.color = USER_STYLES.color;
+        div.style.backgroundColor = USER_STYLES.backgroundColor;
+        oldstyle.appendChild(div);
     }
 }
 
